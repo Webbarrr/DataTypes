@@ -49,6 +49,11 @@ namespace DataTypes
             // 5. Write a C# Sharp program that takes the radius of a circle as input and calculate the perimeter and area of the circle.
             Console.WriteLine(Ex5(12));
 
+            // 6. Write a C# Sharp program to display certain values of the function x = y2 + 2y + 1 (using integer numbers for y , ranging from -5 to +5).
+            Ex6(-5, 6);
+
+
+
             Console.ReadLine();
         }
         private static string Ask(string question)
@@ -96,6 +101,17 @@ namespace DataTypes
         private static double Ex5(int radius)
         {
             return 2 * 3.14 * radius;
+        }
+        private static void Ex6(int start, int end)
+        {
+            Console.WriteLine("x = y² - 2y + 1");
+            int n = 0;
+
+            for (int i = start; i < end; i++)
+            {
+                n = i * i - 2 * i + 1;
+                Console.WriteLine("y = {0} ; x=({0})² - 2*({0}) +1 = {1}", i, n);
+            }
         }
     }
 
